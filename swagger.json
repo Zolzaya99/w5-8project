@@ -11,7 +11,7 @@
     "https"
   ],
   "paths": {
-    "swagger/api-docs": {
+    "/api-docs": {
       "get": {
         "description": "",
         "responses": {

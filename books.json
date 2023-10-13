@@ -9,7 +9,7 @@
       "price": {
         "hardcover": "$24.99",
         "paperback": "$8.99",
-        "audio": "12.99"
+        "audio": "$12.99"
       }
     },
     {
@@ -22,7 +22,7 @@
       "price": {
         "hardcover": "$18.99",
         "paperback": "$11.99",
-        "audio": "5.99"
+        "audio": "$5.99"
       }
     },
     {
@@ -35,7 +35,7 @@
       "price": {
         "hardcover": "$13.99",
         "paperback": "$9.99",
-        "audio": "5.99"
+        "audio": "$5.99"
       }
     },
     {
@@ -48,7 +48,7 @@
       "price": {
         "hardcover": "$24.99",
         "paperback": "$15.99",
-        "audio": "7.99"
+        "audio": "$7.99"
       }
     },
     {
@@ -61,7 +61,7 @@
       "price": {
         "hardcover": "$13.39",
         "paperback": "$8.99",
-        "audio": "5.95"
+        "audio": "$5.95"
       }
     },
     {
@@ -74,7 +74,7 @@
       "price": {
         "hardcover": "30.99",
         "paperback": "$22.99",
-        "audio": "5.35"
+        "audio": "$5.35"
       }
     },
     {
@@ -87,7 +87,7 @@
       "price": {
         "hardcover": "$17.95",
         "paperback": "$13.99",
-        "audio": "10.99"
+        "audio": "$10.99"
       }
     }
   ]
