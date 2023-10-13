@@ -5,7 +5,7 @@
     "description": "My API for Project 2",
     "version": "1.0.0"
   },
-  "host": "week2-personal-assignment.onrender.com",
+  "host": "week5-8project.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
