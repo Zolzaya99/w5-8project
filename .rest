@@ -1,6 +1,6 @@
-// LOCALHOST ### 
+// LOCALHOST 
 
-// get all books
+// get all books ###
 GET http://localhost:8080/books
 
 // get a book by ID
@@ -38,5 +38,10 @@ Content-Type: application/json
       "audio": "5.95"
     }
 }
+
+
+// RENDER 
+### retrieve all books
+GET https://week5-8project.onrender.com/books
 
 
