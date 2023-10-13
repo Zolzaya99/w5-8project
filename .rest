@@ -1,0 +1,27 @@
+// LOCALHOST ### 
+GET http://localhost:8080/
+### 
+GET http://localhost:8080/
+### 
+GET http://localhost:8080/
+### 
+GET http://localhost:8080/
+
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "bookName": "It Ends With Us",
+    "author": "Colleen Hoover",
+    "genre": "Romance novel, Fiction",
+    "yearPublished": "2016",
+    "publisher": "Simon & Schuster Audio",
+    "pageCount": "376",
+    "price": {
+      "hardcover": "$18.99",
+      "paperback": "$11.99",
+      "audio": "5.99"
+    }
+}

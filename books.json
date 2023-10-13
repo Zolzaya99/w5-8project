@@ -1,0 +1,94 @@
+[
+    {
+      "bookName": "Where the Crawdads sing",
+      "author": "Delia Owens",
+      "genre": "Drama, Mystery",
+      "yearPublished": "2018",
+      "publisher": "G.P.Putnam's Sons",
+      "pageCount": "384",
+      "price": {
+        "hardcover": "$24.99",
+        "paperback": "$8.99",
+        "audio": "12.99"
+      }
+    },
+    {
+      "bookName": "It Ends With Us",
+      "author": "Colleen Hoover",
+      "genre": "Romance novel, Fiction",
+      "yearPublished": "2016",
+      "publisher": "Simon & Schuster Audio",
+      "pageCount": "376",
+      "price": {
+        "hardcover": "$18.99",
+        "paperback": "$11.99",
+        "audio": "5.99"
+      }
+    },
+    {
+      "bookName": "Atomic Habits",
+      "author": "James Clear",
+      "genre": "Self-help",
+      "yearPublished": "2018",
+      "publisher": "Penguin Random House",
+      "pageCount": "320",
+      "price": {
+        "hardcover": "$13.99",
+        "paperback": "$9.99",
+        "audio": "5.99"
+      }
+    },
+    {
+      "bookName": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Novel, Fiction, Thriller",
+      "yearPublished": "1960",
+      "publisher": "HarperCollins",
+      "pageCount": "336",
+      "price": {
+        "hardcover": "$24.99",
+        "paperback": "$15.99",
+        "audio": "7.99"
+      }
+    },
+    {
+      "bookName": "1984",
+      "author": "George Orwell",
+      "genre": "Science Fiction",
+      "yearPublished": "1949",
+      "publisher": "Secker & Warburg",
+      "pageCount": "328",
+      "price": {
+        "hardcover": "$13.39",
+        "paperback": "$8.99",
+        "audio": "5.95"
+      }
+    },
+    {
+      "bookName": "Rich Dad Poor Dad",
+      "author": "Robert T. Kyosaki",
+      "genre": "Financial",
+      "yearPublished": "1997",
+      "publisher": "Plata Publishing",
+      "pageCount": "336",
+      "price": {
+        "hardcover": "30.99",
+        "paperback": "$22.99",
+        "audio": "5.35"
+      }
+    },
+    {
+      "bookName": "The Daily Stoic",
+      "author": "Ryan Holiday",
+      "genre": "Non-fiction",
+      "yearPublished": "2016",
+      "publisher": "Portfolio",
+      "pageCount": "416",
+      "price": {
+        "hardcover": "$17.95",
+        "paperback": "$13.99",
+        "audio": "10.99"
+      }
+    }
+  ]
+  
