@@ -1,6 +1,9 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
+const Book = require('../models/books');
+
+
 const getAll = async (req, res, next) => {
   const result = await mongodb.getDb().db('books').collection('books').find();
   result.toArray().then((lists) => {
@@ -36,7 +39,7 @@ const createBook = async (req, res) => {
       audio: req.body.price.audio
     }
   };
-  const response = await mongodb.getDb().db('books').collection('books').insertOne(contact);
+  const response = await mongodb.getDb().db('books').collection('books').insertOne(book);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -63,7 +66,7 @@ const updateBook = async (req, res) => {
     .getDb()
     .db('books')
     .collection('books')
-    .replaceOne({ _id: userId }, contact);
+    .replaceOne({ _id: userId }, book);
   console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();
