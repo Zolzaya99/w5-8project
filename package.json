@@ -18,6 +18,10 @@
     "mongoose": "^6.2.4",
     "swagger-ui-express": "^4.3.0"
   },
+  "engines": {
+    "npm": "10.1.0",
+    "node": "18.18.0"
+  },
   "devDependencies": {
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
