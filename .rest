@@ -1,7 +1,7 @@
 // LOCALHOST 
 
 // get all books ###
-GET http://localhost:8080/books
+GET http://localhost:8080/books HTTP/1.1
 
 // get a book by ID
 ### 
