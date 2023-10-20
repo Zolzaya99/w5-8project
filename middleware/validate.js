@@ -5,10 +5,14 @@ const saveBook = (req, res, next) => {
         bookName: 'required|string',
         author: 'required|string',
         genre: 'required|string',
-        yearPublished: 'required|number|min:4',
+        yearPublished: 'required|numeric|min:4',
         publisher: 'required|string',
-        pageCount: 'required|number',
-        price: 'required|string'
+        pageCount: 'required|numeric',
+        price: {
+            hardcover: 'required|string',
+            paperback: 'required|string',
+            audio: 'required|string'
+        }
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {
