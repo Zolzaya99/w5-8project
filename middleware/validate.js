@@ -17,6 +17,7 @@ const saveBook = (req, res, next) => {
                 message: 'Validation failed',
                 data: err
             });
+            return;
         } else {
             next();
         }
