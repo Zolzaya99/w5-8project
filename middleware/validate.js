@@ -5,9 +5,9 @@ const saveBook = (req, res, next) => {
         bookName: 'required|string',
         author: 'required|string',
         genre: 'required|string',
-        yearPublished: 'required|string|min:4',
+        yearPublished: 'required|number|min:4',
         publisher: 'required|string',
-        pageCount: 'required|string',
+        pageCount: 'required|number',
         price: 'required|string'
     };
     validator(req.body, validationRule, {}, (err, status) => {
@@ -26,3 +26,4 @@ const saveBook = (req, res, next) => {
 module.exports = {
     saveBook
 };
+
