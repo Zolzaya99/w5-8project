@@ -13,6 +13,7 @@ module.exports = (mongoose) => {
         },
         yearPublished: {
             type: Number,
+            min: 4,
         },
         publisher: {
             type: String,
