@@ -1,7 +1,12 @@
 // LOCALHOST 
 
-// get all books ###
+// get all books and authors 
+### books
 GET http://localhost:8080/books HTTP/1.1
+
+### authors
+GET http://localhost:8080/authors HTTP/1.1
+
 
 // get a book by ID
 ### 
@@ -21,7 +26,9 @@ GET http://localhost:8080/books/6528b4854e3ba321f3aa139e
 
 
 
-### Create a book
+### Create a book and an author
+
+### Create books
 POST http://localhost:8080/books/ HTTP/1.1
 Content-Type: application/json
 
@@ -39,8 +46,21 @@ Content-Type: application/json
     }
 }
 
-### Update 
-PUT http://localhost:8080/books/6532c9c2e9cc7987c2300320 HTTP/1.1
+### Create authors
+POST http://localhost:8080/authors/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "authorName": "J.K. Rowling",
+  "birthday": "07/31/1965",
+  "hometown": "Bristol, England",
+  "booksWritten": "28",
+  "networth": "1 billion",
+  "children": "3"
+}
+
+### Update books
+PUT http://localhost:8080/books/ HTTP/1.1
 Content-Type: application/json
 
 {
@@ -56,13 +76,36 @@ Content-Type: application/json
       "audio": "$5.95"}
 }
 
-### Remove 
+### Update authors
+PUT http://localhost:8080/authors/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "authorName": "J.K. Rowling",
+  "birthday": "07/31/1965",
+  "hometown": "Bristol, England",
+  "booksWritten": "28",
+  "networth": "1 billion",
+  "children": "3"
+}
+
+
+### Remove books 
 DELETE http://localhost:8080/books/6532c9c2e9cc7987c2300320 HTTP/1.1
 
 
+### Remove authors
+DELETE http://localhost:8080/authors/ HTTP/1.1
+
+
 // RENDER 
-### retrieve all books
+### retrieve all books and authors
+
+### books 
 GET https://week5-8project.onrender.com/books
+
+##3 authors
+GET https://week5-8project.onrender.com/authors
 
 // get a book by ID
 ### 

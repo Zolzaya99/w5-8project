@@ -1,0 +1,43 @@
+[
+    {
+      "authorName": "J.K. Rowling",
+      "birthday": "07/31/1965",
+      "hometown": "Bristol, England",
+      "booksWritten": "28",
+      "networth": "1 billion",
+      "children": "3"
+    },
+    {
+      "authorName": "Ernest Hemingway",
+      "birthday": "07/21/1899",
+      "hometown": "Oak Park, Illinois",
+      "booksWritten": "15",
+      "networth": "1 million",
+      "children": "3"
+    },
+    {
+      "authorName": "Rick Riordan",
+      "birthday": "06/05/1964",
+      "hometown": "San Santonio, Texas",
+      "booksWritten": "39",
+      "networth": "40 million",
+      "children": "5"
+    },
+    {
+      "authorName": "Tom Clancy",
+      "birthday": "04/12/1947",
+      "hometown": "Baltimore, Maryland",
+      "booksWritten": "6",
+      "networth": "300 million",
+      "children": "3"
+    },
+    {
+      "authorName": "R.L. Stine",
+      "birthday": "10/08/1943",
+      "hometown": "Columbus, Ohio",
+      "booksWritten": "31",
+      "networth": "200 million",
+      "children": "1"
+    }
+  ]
+  
