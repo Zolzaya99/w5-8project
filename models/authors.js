@@ -13,6 +13,7 @@ module.exports = (mongoose) => {
         },
         booksWritten: {
             type: Number,
+            min:2
         },
         networth: {
             type: String,
