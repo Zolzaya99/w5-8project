@@ -3,32 +3,32 @@ const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-// const { auth, requiresAuth } = require('express-openid-connect');
+require('dotenv').config();
+const { auth, requiresAuth } = require('express-openid-connect');
 
 const port = process.env.PORT || 8080;
 const app = express();
 
-//WILL FINISH THE CODE BELOW NEXT WEEK ONCE I HAVE SET UP EVERYTHING FOR OATH.
-// commented them out for now. 
 
-// const config = {
-//   authRequired: false,
-//   auth0Logout: true,
-//   secret: process.env.SECRET,
-//   baseURL: process.env.BASE_URL,
-//   clientID: process.env.CLIENT_ID,
-//   issuerBaseURL: process.env.ISSUER_BASE_URL,
-// };
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.SECRET,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL,
+};
 
-// app.use(auth(config));
+app.use(auth(config));
 
-// app.get('/', (req, res) => {
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
 
-// app.get('/profile', requiresAuth(), (req, res) => {
-//   res.send(JSON.stringify(req.oidc.user));
-// });
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+});
+
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app
