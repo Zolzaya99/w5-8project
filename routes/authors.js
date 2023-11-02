@@ -12,13 +12,13 @@ router.get('/:id', authorsController.getSingle);
 router.get('/', authorsController.getAll);
 
 // create a new book
-router.post('/', validation.saveAuthor, authorsController.createAuthor);
+router.post('/', authorize.checkLogin, validation.saveAuthor, authorsController.createAuthor);
 
 // update a book by id 
-router.put('/:id', validation.saveAuthor, authorsController.updateAuthor);
+router.put('/:id', authorize.checkLogin, validation.saveAuthor, authorsController.updateAuthor);
 
 // remove a book by id 
-router.delete('/:id', authorsController.deleteAuthor);
+router.delete('/:id', authorize.checkLogin, authorsController.deleteAuthor);
 
 
 module.exports = router;
