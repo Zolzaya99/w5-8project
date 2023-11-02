@@ -4,6 +4,7 @@ const book = require('../models/authors');
 
 const authorsController = require('../controllers/authors');
 const validation = require('../middleware/validate')
+const authorize = require('../middleware/authorize');
 
 // get book by id
 router.get('/:id', authorsController.getSingle);
