@@ -9,7 +9,6 @@ const { auth, requiresAuth } = require('express-openid-connect');
 const port = process.env.PORT || 8080;
 const app = express();
 
-
 const config = {
   authRequired: false,
   auth0Logout: true,
@@ -19,6 +18,14 @@ const config = {
   issuerBaseURL: process.env.ISSUER_BASE_URL,
 };
 
+// Move the const redirectUri declaration below the config object
+const redirectUri = `${config.baseURL}/callback`;
+
+// Example usage in your authentication setup
+const authConfig = {
+  // Other configuration options...
+  redirect_uri: redirectUri, // Use the dynamically constructed redirect_uri
+};
 app.use(auth(config));
 
 app.get('/', (req, res) => {
@@ -28,7 +35,6 @@ app.get('/', (req, res) => {
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user));
 });
-
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app
@@ -44,7 +50,7 @@ app
     next();
   })
   .use('/', require('./routes'));
-  
+
 mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);
