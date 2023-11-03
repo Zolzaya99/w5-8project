@@ -18,20 +18,30 @@ const config = {
   issuerBaseURL: process.env.ISSUER_BASE_URL,
 };
 
-const redirectUri = `${config.baseURL}/callback`;
+// const redirectUri = `${config.baseURL}/callback`;
 
-const authConfig = {
-  redirect_uri: redirectUri
-};
+// const authConfig = {
+//   redirect_uri: redirectUri
+// };
+
 app.use(auth(config));
 
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
+// app.use((req, res, next) => {
+//   if (!req.oidc.isAuthenticated()) {
+//     return res.status(401).json({error: 'Not authorized'});
+//   }
+//   next();
+// })
+
 app.get('/profile', requiresAuth(), (req, res) => {
+  console.log(JSON.stringify(req.oidc.user))
   res.send(JSON.stringify(req.oidc.user));
-});
+}) 
+
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app
