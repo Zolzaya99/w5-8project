@@ -28,12 +28,6 @@ app.use(auth(config));
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
-// app.use((req, res, next) => {
-//   if (!req.oidc.isAuthenticated()) {
-//     return res.status(401).json({error: 'Not authorized'});
-//   }
-//   next();
-// })
 
 app.get('/profile', requiresAuth(), (req, res) => {
   console.log(JSON.stringify(req.oidc.user))
