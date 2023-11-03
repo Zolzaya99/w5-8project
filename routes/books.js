@@ -4,7 +4,7 @@ const book = require('../models/books');
 
 const booksController = require('../controllers/books');
 const validation = require('../middleware/validate')
-const authorize = require('../middleware/authorize.js');
+const authorize = require('../middleware/authorize');
 
 // get book by id
 router.get('/:id', booksController.getSingle);

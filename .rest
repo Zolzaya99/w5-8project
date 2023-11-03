@@ -73,7 +73,8 @@ Content-Type: application/json
     "price": {
       "hardcover": "$14.99",
       "paperback": "$6.63",
-      "audio": "$5.95"}
+      "audio": "$5.95"
+      }
 }
 
 ### Update authors
@@ -104,10 +105,10 @@ DELETE http://localhost:8080/authors/653c2254581be9aa4213bc12 HTTP/1.1
 ### books 
 GET https://week5-8project.onrender.com/books
 
-##3 authors
+### authors
 GET https://week5-8project.onrender.com/authors
 
-// get a book by ID
+// get book by ID
 ### 
 GET http://week5-8project.onrender.com/books/6528b4854e3ba321f3aa1398
 ### 
