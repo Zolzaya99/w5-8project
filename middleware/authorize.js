@@ -1,11 +1,11 @@
 const checkLogin = (req, res, next) => {
-    if (!req.oids.isAuthenticated()) {
+    if (!req.oidc.isAuthenticated()) {
         return res.status(401).send({ 
-            error: 'Need authorization to login',
+            error: 'You need to be authorized to view this page.',
             login: "https://week5-8project.onrender.com/login"
         });
     }
- next();
+    next();
 };
 
-module.exports = {checkLogin}; 
+module.exports = { checkLogin };

@@ -18,13 +18,10 @@ const config = {
   issuerBaseURL: process.env.ISSUER_BASE_URL,
 };
 
-// Move the const redirectUri declaration below the config object
 const redirectUri = `${config.baseURL}/callback`;
 
-// Example usage in your authentication setup
 const authConfig = {
-  // Other configuration options...
-  redirect_uri: redirectUri, // Use the dynamically constructed redirect_uri
+  redirect_uri: redirectUri
 };
 app.use(auth(config));
 
